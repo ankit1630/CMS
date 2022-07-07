@@ -1,0 +1,37 @@
+.faq-content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  &__loading,
+  &__no-faqs {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__modal-footer {
+    margin-top: 20px;
+  }
+
+  &__list {
+    overflow: auto;
+
+    &-item {
+      box-shadow: rgb(0 0 0 / 8%) 0px 1px 8px;
+      padding: 20px;
+      margin: 20px;
+      border-radius: 8px;
+
+      &-description {
+        margin: 0;
+      }
+    }
+  }
+
+  &__error {
+    color: rgb(220, 12, 12);
+  }
+}

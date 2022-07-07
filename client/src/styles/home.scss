@@ -1,0 +1,21 @@
+.home-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+
+  &__btns {
+    margin-top: 20px;
+  }
+
+  &__btn {
+    color: black;
+    background-color: aquamarine;
+    margin: 20px;
+    padding: 12px;
+    outline: none;
+    text-decoration: none;
+    border-radius: 8px;
+  }
+}
