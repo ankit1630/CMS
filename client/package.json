@@ -26,7 +26,7 @@
     "test": "DISABLE_ESLINT_PLUGIN=true react-scripts test",
     "eject": "DISABLE_ESLINT_PLUGIN=true react-scripts eject"
   },
-  "proxy": "http://localhost:3001",
+  "proxy": "https://cms-backend-ub99.onrender.com",
   "eslintConfig": {
     "extends": [
       "react-app",
