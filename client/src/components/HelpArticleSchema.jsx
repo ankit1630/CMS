@@ -75,7 +75,7 @@ class HelpArticleSchema extends React.PureComponent {
     this.setState({uploadXhrIsInProgress: true});
 
     xhr({
-      route: "/api/help-article/upload-schema",
+      route: "https://cms-backend-ub99.onrender.com/api/help-article/upload-schema",
       method: "POST",
       data: {schema: JSON.stringify(this.state.schema)},
       onSuccess: (res) => {
@@ -89,7 +89,7 @@ class HelpArticleSchema extends React.PureComponent {
 
   componentWillMount() {
     xhr({
-      route: "/api/help-article/schema",
+      route: "https://cms-backend-ub99.onrender.com/api/help-article/schema",
       onSuccess: (res) => {
         const schema = res.schema ? JSON.parse(res.schema) : this.state.schema;
         this.setState({

@@ -237,7 +237,7 @@ class HelpArticle extends React.PureComponent {
     });
 
     xhr({
-      route: "/api/help-article/schema",
+      route: "https://cms-backend-ub99.onrender.com/api/help-article/schema",
       onSuccess: (res) => {
         const schema = res.schema ? JSON.parse(res.schema) : null;
         const {inputValues, formFields} = this._processSchema(schema);
@@ -257,7 +257,7 @@ class HelpArticle extends React.PureComponent {
   }
 
   _onSaveBtnClick() {
-    fetch("/api/help-article/add", {
+    fetch("https://cms-backend-ub99.onrender.com/api/help-article/add", {
       method: "POST",
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
@@ -294,7 +294,7 @@ class HelpArticle extends React.PureComponent {
   }
 
   componentWillMount() {
-    fetch("/api/help-article").then((res) => res.json()).then((res) => {
+    fetch("https://cms-backend-ub99.onrender.com/api/help-article").then((res) => res.json()).then((res) => {
       this.setState({
         helpArticleIsLoading: false,
         helpArticleList: [...res]

@@ -206,7 +206,7 @@ class FaqContent extends React.PureComponent {
 
   _fetchAndUpdateFaqSchema() {
     xhr({
-      route: "/api/faq-content/schema",
+      route: "https://cms-backend-ub99.onrender.com/api/faq-content/schema",
       onSuccess: (res) => {
         const schema = res.schema ? JSON.parse(res.schema) : null;
         const {inputValues, formFields} = this._processSchema(schema);
@@ -255,7 +255,7 @@ class FaqContent extends React.PureComponent {
 
   _onSaveBtnClick() {
     xhr({
-      route: "/api/faq-content/add",
+      route: "https://cms-backend-ub99.onrender.com/api/faq-content/add",
       method: "POST",
       data: this._prepareFaqContentData(),
       onSuccess: (res) => {
@@ -275,7 +275,7 @@ class FaqContent extends React.PureComponent {
   }
 
   componentWillMount() {
-    fetch("/api/faq-content").then((res) => res.json()).then((res) => {
+    fetch("https://cms-backend-ub99.onrender.com/api/faq-content").then((res) => res.json()).then((res) => {
       this.setState({
         faqContentIsLoading: false,
         faqsList: [...res]

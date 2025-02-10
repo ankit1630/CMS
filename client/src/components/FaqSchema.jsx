@@ -62,7 +62,7 @@ class FaqSchema extends React.PureComponent {
     this.setState({uploadXhrIsInProgress: true});
 
     xhr({
-      route: "/api/faq-content/upload-schema",
+      route: "https://cms-backend-ub99.onrender.com/api/faq-content/upload-schema",
       method: "POST",
       data: {schema: JSON.stringify(this.state.schema)},
       onSuccess: (res) => {
@@ -76,7 +76,7 @@ class FaqSchema extends React.PureComponent {
 
   componentWillMount() {
     xhr({
-      route: "/api/faq-content/schema",
+      route: "https://cms-backend-ub99.onrender.com/api/faq-content/schema",
       onSuccess: (res) => {
         const schema = res.schema ? JSON.parse(res.schema) : this.state.schema;
         this.setState({
